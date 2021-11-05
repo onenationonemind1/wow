@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title> 머지택틱스 레벨 및 가격 계산기 </title> <!-- 제 -->
+  <title> 머지택틱스 최대래벨 계산기 </title> <!-- 제 -->
   <meta charset="utf-8">  <!-- 한글 사용을 위  -->
  
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,18 +17,141 @@
 </head)
 
 <body>
-  <ol>
-    <li>HTML</li>
-    <li>HTML </li>
-    <li>CSS  </li>
-  </ol>
+  
 
-<h1><a href="https://phys.org/technology-news/" target="_blank">HI 나경아 뭐하누?</a></h1>
+  <script>
 
-<h2>앙기모띠</h2>
-<strong>i love my self</strong>
-<strong><p> so much </p><strong>
-<img src="hi.webp" width ="30%">
+            function calc()
+            {
+                var n1 = parseFloat(document.getElementById('n1').value); //돈
+                var n2 = parseFloat(document.getElementById('n2').value); //머지
+                var n3 = parseFloat(document.getElementById('n3').value); // 가격
+                var n4 = parseFloat(document.getElementById('n4').value); // 여신갯수
+                var a = Math.floor( n1/n3); // 뽑을수 있는 갯수
+                var b = a*(n2+1); // 뽑을 수 있는 갯수 > 여신갯수
+                var c = ((n2+1)*n4) + (n2*(a-n4)); // 뽑을 수 있는갯수 <=여신갯수
+                var z = 0;
+                var x = 0;
+                var y = 0;
+
+                if (n4 > a) {
+                z=b;
+                }
+                if (n4 <= a) {
+                z=c;
+                }
+
+
+
+
+
+
+            if( z>=1 && z<2) {
+                x= 1;
+                }
+                if( z>=2 && z<4) {
+                x =2;
+                }
+                if( z>=4 && z<8) {
+                x =3 ;
+                }
+                if( z>=8 && z<16) {
+                x =4 ;
+                }
+                if( z>=16 && z<32) {
+                x =5 ;
+                }
+                if( z>=32 && z<64) {
+                x =6 ;
+                }
+                if( z>=64 && z<128) {
+                x =7 ;
+                }
+                if( z>=128 && z<256) {
+                x =8 ;
+                }
+                if( z>=256 && z<1024) {
+                x =9 ;
+                }
+                if( z>=1024 && z<2048) {
+                x =10 ;
+                }
+
+
+
+                if( a>=1 && a<2) {
+                    z= 1;
+                    }
+                    if( a>=2 && a<4) {
+                    z =2;
+                    }
+                    if( a>=4 && a<8) {
+                    z =4 ;
+                    }
+                    if( a>=8 && a<16) {
+                    z =8 ;
+                    }
+                    if( a>=16 && a<32) {
+                    z =16 ;
+                    }
+                    if( a>=32 && a<64) {
+                    z =32 ;
+                    }
+                    if( a>=64 && a<128) {
+                    z =64 ;
+                    }
+                    if( a>=128 && a<256) {
+                    z =128 ;
+                    }
+                    if( a>=256 && a<1024) {
+                    z =256 ;
+                    }
+                    if( a>=1024 && a<2048) {
+                    z =1024 ;
+                    }
+
+
+
+
+
+                document.getElementById('A').value = x;
+                  document.getElementById('B').value = z;
+
+
+
+            }
+
+        </script>
+
+    </head>
+    <body>
+      <img src="good.jpg" width ="30%"><br/>
+      <h2>내가 가진 돈으로 최대 머지 레벨을 알아보자^3^=★</h2>
+
+      </body>
+     <img src="two.JPG" width ="30%"><br/>
+ 돈의 총량 &nbsp;&nbsp;&nbsp;    <input type="text" id="n1"/><br/><br/>
+      <img src="one.JPG" width ="30%"> <br/>
+      덱 레벨
+        <input type="text" id="n2"/><br/><br/>
+  <img src="yy.JPG" width ="10%"><br/>
+            생산 가격         <input type="text" id="n3"/><br/><br/>
+        <img src="yes.JPG" width ="10%"><br/>
+      여신갯수      <input type="text" id="n4"/><br/><br/>
+
+    <button onclick="calc();"> 결과 보기  </button><br/><br/>
+      최대 레벨  <input type="text" id="A"/>
+      뽑아야 하는 갯수  <input type="text" id="B"/><br/><br/>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
 <script id="dsq-count-scr" src="//rkfmvk.disqus.com/count.js" async></script>
  <div id="disqus_thread"></div>
 <script>
